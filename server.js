@@ -1147,9 +1147,9 @@ client.on("guildMemberAdd", member => {
       .setColor(fixcolor)
       .setThumbnail(member.user.avatarURL())
       .setAuthor(member.user.username, member.user.avatarURL())
-      .addField("✍🏻 | Member Tag :", `**${member.user.tag}**`)
-      .addField("🆔 | Member ID :", `**${member.user.id}**`)
-      .addField("1️⃣ | You Are Number :", `**${member.guild.memberCount}**`)
+      .addField("🏻🐞 | Member Tag :", `**${member.user.tag}**`)
+      .addField("�📌 | Member ID :", `**${member.user.id}**`)
+      .addField("1️📍 | You Are Number :", `**${member.guild.memberCount}**`)
       .addField(
         "| Create Your Account :",
         `** ${moment(member.user.createdAt).format(
@@ -1158,7 +1158,7 @@ client.on("guildMemberAdd", member => {
         true
       )
       .addField(
-        "🚪 | Join Server :",
+        "�📤 | Join Server :",
         `** ${moment(member.joinedAt).format("D/M/YYYY h:mm a")} \n\`\`${moment(
           member.joinedAt
         )
