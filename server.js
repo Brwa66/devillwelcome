@@ -115,7 +115,7 @@ client.on("message", message => {
 > ${prefix}join`
       )
       .addField(
-        "**Third Page For Welcome & Leave :**",
+        "**Third Page For➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ & │ᴍᴇᴍʙᴇʀ-ʟᴇғᴛ :**",
         `
 > ➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ
 > │ᴍᴇᴍʙᴇʀ-ʟᴇғᴛ`
