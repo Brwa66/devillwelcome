@@ -43,7 +43,7 @@ const queue = new Map();
 var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
-client.login("NzY5MTQ4MDUyMDY1MjIyNjg2.X5Ky8Q.FdioixUtW93V_Qvo7HeB7EVhD3k");
+client.login("ODkxNjgyOTEyMDc0ODYyNjAy.YVB6bA.I91sv1M8QAC4oD8XHyxSs_PNDVA");
 ///// ===== { < playine > } ===== /////
 client.on("ready", () => {
   setInterval(() => {
@@ -54,7 +54,7 @@ client.on("ready", () => {
       )}, Guilds ${client.guilds.cache.size}`
     );
     client.user.setActivity(
-      `=help | new Update , User ${client.guilds.cache.reduce(
+      `w!help | DEVιL Welcome , User ${client.guilds.cache.reduce(
         (a, g) => a + g.memberCount,
         0
       )}, servers ${client.guilds.cache.size}`
@@ -105,8 +105,6 @@ client.on("message", message => {
 > ${prefix}unban @user
 > ${prefix}unban all
 > ${prefix}kick @user
-> ${prefix}anti problem [ on / off ] / Anti : evereone / here / link
-> ${prefix}anti swear [ on / off ] / Anti : Jnew
 > ${prefix}lock
 > ${prefix}unlock
 > ${prefix}hide
@@ -119,8 +117,8 @@ client.on("message", message => {
       .addField(
         "**Third Page For Welcome & Leave :**",
         `
-> 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 / welcome
-> 𝐋𝐄𝐅𝐓 / leave`
+> ➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ
+> │ᴍᴇᴍʙᴇʀ-ʟᴇғᴛ`
       )
       .addField(
         "**Forth Page For Protection  :**",
@@ -1058,54 +1056,9 @@ client.on("message", message => {
     });
   }
 });
-client.on("message", message => {
-  var args = message.content.split(/[ ]+/);
-  if (message.content.includes("http")) {
-    if (message.member.hasPermission("MANAGE_EMOJIS")) return;
-    if (!message.channel.guild) return;
-    if (!spread[message.guild.id])
-      spread[message.guild.id] = {
-        onoff: "Off"
-      };
-    if (spread[message.guild.id].onoff === "Off") return;
-    message.delete();
-    return message.reply(
-      `**${warn} | You Dont Have \`MANAGE_EMOJIS\` Permission .**`
-    );
-  }
-});
-client.on("message", message => {
-  var args = message.content.split(/[ ]+/);
-  if (message.content.includes("@everyone")) {
-    if (message.member.hasPermission("MENTION_EVERYONE")) return;
-    if (!message.channel.guild) return;
-    if (!spread[message.guild.id])
-      spread[message.guild.id] = {
-        onoff: "Off"
-      };
-    if (spread[message.guild.id].onoff === "Off") return;
-    message.delete();
-    return message.reply(
-      `**${warn} | You Dont Have \`MENTION_EVERYONE\` Permission .**`
-    );
-  }
-});
-client.on("message", message => {
-  var args = message.content.split(/[ ]+/);
-  if (message.content.includes("@here")) {
-    if (message.member.hasPermission("MENTION_EVERYONE")) return;
-    if (!message.channel.guild) return;
-    if (!spread[message.guild.id])
-      spread[message.guild.id] = {
-        onoff: "Off"
-      };
-    if (spread[message.guild.id].onoff === "Off") return;
-    message.delete();
-    return message.reply(
-      `**${warn} | You Dont Have \`MENTION_EVERYONE\` Permission .**`
-    );
-  }
-});
+
+
+
 ///// ===== { < anti swear > } ===== /////
 let swear = JSON.parse(fs.readFileSync("./swear.json", "utf8"));
 client.on("message", message => {
@@ -1174,18 +1127,18 @@ client.on("message", message => {
 ////// ===== { < welcome > } ===== /////
 /*client.on("guildMemberAdd", member => {
   let welcomer = member.guild.channels.cache.find(
-    channel => channel.name === "𝐖𝐄𝐋𝐂𝐎𝐌𝐄" || channel.name === "welcome"
+    channel => channel.name === "➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ" || channel.name === "➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ"
   );
   if (!welcomer) return;
   if (welcomer) {
     welcomer.send(
-      `> **<a:emoji_14:768391583287476254> | Welcome <@${member.user.id}> To : <a:emoji_13:768391532994232320> | ${member.guild.name} .**`
+      `> **| Welcome <@${member.user.id}> To : | ${member.guild.name} .**`
     );
   }
 });*/
 client.on("guildMemberAdd", member => {
   let welcomer = member.guild.channels.cache.find(
-    channel => channel.name === "𝐖𝐄𝐋𝐂𝐎𝐌𝐄" || channel.name === "welcome"
+    channel => channel.name === "➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ" || channel.name === "➪│ᴊᴏɪɴ-ᴅɪsᴄᴏʀᴅ"
   );
   if (!welcomer) return;
   if (welcomer) {
@@ -1198,7 +1151,7 @@ client.on("guildMemberAdd", member => {
       .addField("🆔 | Member ID :", `**${member.user.id}**`)
       .addField("1️⃣ | You Are Number :", `**${member.guild.memberCount}**`)
       .addField(
-        "<a:emoji_82:763507121265573909> | Create Your Account :",
+        "| Create Your Account :",
         `** ${moment(member.user.createdAt).format(
           "D/M/YYYY h:mm a"
         )} **\n** \`${moment(member.user.createdAt).fromNow()}\` **`,
@@ -1223,7 +1176,7 @@ client.on("guildMemberAdd", member => {
 ///// ===== { < leave > } ===== /////
 client.on("guildMemberRemove", member => {
   let welcomer = member.guild.channels.cache.find(
-    channel => channel.name === "𝐋𝐄𝐅𝐓" || channel.name === "leave"
+    channel => channel.name === "│ᴍᴇᴍʙᴇʀ-ʟᴇғᴛ" || channel.name === "│ᴍᴇᴍʙᴇʀ-ʟᴇғᴛ"
   );
   if (!welcomer) return;
   if (welcomer) {
@@ -1236,7 +1189,7 @@ client.on("guildMemberRemove", member => {
       .addField("🆔 | Member ID :", `**${member.user.id}**`)
       .addField("1️⃣ | Server Member :", `**${member.guild.memberCount}**`)
       .addField(
-        "<a:emoji_82:763507121265573909> | Create Your Account :",
+        "| Create Your Account :",
         `** ${moment(member.user.createdAt).format(
           "D/M/YYYY h:mm a"
         )} **\n** \`${moment(member.user.createdAt).fromNow()}\` **`,
